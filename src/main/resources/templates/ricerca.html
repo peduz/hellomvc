@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+<title>Studenti</title>
+</head>
+<body>
+	<h1>Students</h1>
+	
+	<div th:if="${ricercaId}" >
+		<span th:text="${studente.id}"></span>
+		<span th:text="${studente.name}"></span>
+	</div>
+	
+	<div th:if="${ricercaName}" >
+		<ul>
+			<li th:each="studente : ${studentiList}" th:text="${studente.name}"></li>
+		</ul>
+	</div>
+</body>
+</html>
